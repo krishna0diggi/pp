@@ -9,6 +9,7 @@ import { GallerySection } from './components/GallerySection';
 import { Footer } from './components/Footer';
 import { PrintableBiodataModal } from './components/PrintableBiodataModal';
 import { OriginalDocModal } from './components/OriginalDocModal';
+import { FloatingLanguageSwitcher } from './components/FloatingLanguageSwitcher';
 import './App.css';
 
 function BiodataApp() {
@@ -54,6 +55,9 @@ function BiodataApp() {
         isOpen={isDocModalOpen}
         onClose={() => setIsDocModalOpen(false)}
       />
+
+      {/* Floating Animated Language Switcher in bottom-right */}
+      <FloatingLanguageSwitcher />
     </div>
   );
 }
