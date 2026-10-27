@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF7F0;
+  --color-ivory-light: #FDFBF7;
+  --color-champagne: #E8D8B9;
+  --color-champagne-light: #F7F1E5;
+  --color-champagne-gold: #DFC89F;
+  --color-maroon: #641C2B;
+  --color-maroon-dark: #45111B;
+  --color-maroon-light: #7E2638;
+  --color-gold: #B08D57;
+  --color-gold-light: #CCA872;
+  --color-gold-dark: #8C6D39;
+  --color-charcoal: #252321;
+  --color-charcoal-muted: #4B4643;
+  --color-warm-grey: #827B73;
+  
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-devanagari: 'Rozha One', 'Cormorant Garamond', serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF7F0;
+  color: #252321;
+  overflow-x: hidden;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8D8B9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08D57;
+}
+
+/* Subtle decorative grain background pattern */
+.bg-subtle-pattern {
+  background-color: #FAF7F0;
+  background-image: radial-gradient(rgba(176, 141, 87, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-ornate-mandala {
+  background-image: radial-gradient(circle at center, rgba(100, 28, 43, 0.04) 0%, transparent 70%);
+}
+
+/* Luxury Card Borders */
+.gold-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(176, 141, 87, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(100, 28, 43, 0.05);
+}
+
+.gold-card-hover {
+  transition: all 0.3s ease;
+}
+.gold-card-hover:hover {
+  border-color: rgba(176, 141, 87, 0.5);
+  box-shadow: 0 15px 35px -8px rgba(100, 28, 43, 0.09);
+  transform: translateY(-2px);
+}
+
+/* Heritage corner ornaments */
+.corner-ornament {
+  position: relative;
+}
+.corner-ornament::before,
+.corner-ornament::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #B08D57;
+  pointer-events: none;
+}
+.corner-ornament::before {
+  top: 6px;
+  left: 6px;
+  border-top: 1px solid #B08D57;
+  border-left: 1px solid #B08D57;
+}
+.corner-ornament::after {
+  bottom: 6px;
+  right: 6px;
+  border-bottom: 1px solid #B08D57;
+  border-right: 1px solid #B08D57;
+}
+
+/* Print Optimization */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+}

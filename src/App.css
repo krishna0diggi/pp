@@ -1,0 +1,27 @@
+/* Luxury Matrimonial Custom Styles & Utilities */
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #B08D57 0%, #E8D8B9 50%, #94733F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-maroon-gradient {
+  background: linear-gradient(135deg, #641C2B 0%, #45111B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(to right, rgba(176,141,87,0.1), rgba(176,141,87,0.8), rgba(176,141,87,0.1)) 1;
+}
+
+.subtle-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+}
